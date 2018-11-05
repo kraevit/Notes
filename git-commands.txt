@@ -1,0 +1,45 @@
+# Basic #
+#########
+
+git clone ( clone repo from github website )
+git pull ( pulling the latest changes )
+git init ( initialize a local github repository )
+git status ( checks staging area )
+git log --oneline ( prints history changes )
+git add filename ( add files to staging area )
+gid add . ( add all files )
+git commit -m "message" ( commit changes )
+git rm --cached index.html ( removing files from staging area )
+git push origin reponame ( pushing to the online repository )
+ 
+# Undoing things #
+##################
+
+git checkout commit ( safe way )
+git rever commit ( quite safe )
+git reset commit --hard ( unsafe/permanent )
+
+# Branches #
+############
+
+git branch branchname ( create a new branch )
+git brancha -a ( prints all branches )
+git checkout branchname ( switch between branches )
+git branch -D branchname ( delete branch )
+git checkout -b branchanem ( create a new branch and switch to it at the same time - quick way )
+  
+# Merging branches #
+####################
+
+git checkout master ( first switch to master )
+git merge branchname ( merge branches to master )
+
+# Remote repos #
+################
+
+echo "#branchame" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/githubusername/reponame
+git push -u origin master
