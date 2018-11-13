@@ -1,0 +1,143 @@
+DEVTIPS:
+
+gitignore.io
+
+# Git Workflow 
+
+- clone the repo
+- make changes + commit them
+- create a new branch
+- switch branches
+- pull request
+- delete a branch
+
+# add and commit at the same time
+
+$ git commit -a -m "removed the pink bg"
+
+$ git log
+
+$ git checkout -b crazy-idea
+
+$ git branch
+
+$ git checkout master
+
+$ git push --set-upstream origin crazy-idea // push local branch to remote
+
+NET NINJA:
+
+### CREATE REPO
+
+$ cd my-repo // navigate to dir
+
+$ git init // initialize empty repo eg .git
+
+$ touch index.html style.css // create 2 files
+
+
+### STAGING FILES
+
+$ git status // staging area
+
+$ git add <filename> // add file to staging area
+
+$ git rm --cached index.html // remove files from staging
+
+$ git add . // add all files to the staging area
+
+
+
+### COMMITS / SNAPSHOTS
+
+$ git commit -m "descriptive message" // snapshot of the code
+
+$ git commit -a -m "Some message" // add to staging and commit
+
+$ git log
+
+$ git log --oneline
+
+
+### UNDOING THINGS
+
+$ git checkout commitID // REALLY SAFE - check code at this commit/state
+
+$ git checkout master // go back to master branch
+
+$ git revert commitID (:wq) // SAFE - undoing commits
+
+$ git reset commitID // UNSAFE - reset to this commit
+
+$ git reset commitID --hard // UNSAFE/PERMANENT reset to this commit and changes
+
+
+### BRANCHES
+
+$ git branch feature-1 // create a new branch
+
+$ git checkout feature-1 // switch to feature-1
+
+$ git branch -a // show all branches
+
+$ git checkout master // go back to master
+
+$ git branch -D branchname // delete branch if not merged
+
+$ git checkout -b feature-2 // create branch and switch to it at the same time
+
+### merging branchesh and dealing with conflicts
+
+$ git checkout master // first go to master
+
+$ git merge feature-a // merge feature-a branch to master
+
+
+### GITHUB
+
+IF WE HAVE LOCAL REPO
+
+$ git push https://github.com/kraevit/git-test.git master // push local repo to remote
+
+$ git remote add origin https://github.com/kraevit/git-test.git // add allias to this remote repo
+
+$ git remote -v
+
+$ git push origin master
+
+
+IF WE DON'T HAVE LOCAL REPO
+
+Create new repo on the github.com website
+
+$ git clone repo-name // clone remote repo to local machine
+ 
+$ touch index.js
+
+$ git add index.js
+
+$ git commin -m "added index.js file"
+
+$ git remote -v
+
+$ git push origin master - we dont need to specify allias
+
+
+### COLLABORATING
+
+$ git checkout master
+
+$ git pull origin master // pull master from our remote to local repo
+
+$ git checkout -b index-html // create new branch and switch to it
+
+make some changes to index
+
+$ git add .
+
+$ git commit -m "added index.html"
+
+$ git push origin index-html // push local branch to remote repo
+
+
+### FORKING
